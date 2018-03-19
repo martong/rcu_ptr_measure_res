@@ -1,0 +1,26 @@
+read_one set
+Waited 3000.12 ms
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  locale::facet::_S_create_c_locale name not valid
+../build/release/measurements/measure_urcu: Aborted
+
+ Performance counter stats for '../build/release/measurements/measure_urcu read_one 1 19 2':
+
+      60651.501333 task-clock (msec)         #   19.450 CPUs utilized          
+            259039 context-switches          #    0.004 M/sec                  
+                65 cpu-migrations            #    0.001 K/sec                  
+               708 page-faults               #    0.012 K/sec                  
+      181160823148 cycles                    #    2.987 GHz                     [39.84%]
+      153095430809 stalled-cycles-frontend   #   84.51% frontend cycles idle    [39.96%]
+       89911514688 stalled-cycles-backend    #   49.63% backend  cycles idle    [40.14%]
+       66970943790 instructions              #    0.37  insns per cycle        
+                                             #    2.29  stalled cycles per insn [50.29%]
+       22521050716 branches                  #  371.319 M/sec                   [50.32%]
+          10278141 branch-misses             #    0.05% of all branches         [50.36%]
+       31015802254 L1-dcache-loads           #  511.377 M/sec                   [50.21%]
+          97666283 L1-dcache-load-misses     #    0.31% of all L1-dcache hits   [50.11%]
+          58200307 LLC-loads                 #    0.960 M/sec                   [39.89%]
+           4088835 LLC-load-misses           #    7.03% of all LL-cache hits    [39.77%]
+
+       3.118366531 seconds time elapsed
+

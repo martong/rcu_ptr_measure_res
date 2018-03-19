@@ -1,0 +1,26 @@
+read_one set
+Waited 3000.26 ms
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  locale::facet::_S_create_c_locale name not valid
+../build/release/measurements/measure_tbb_srw_mutex: Aborted
+
+ Performance counter stats for '../build/release/measurements/measure_tbb_srw_mutex read_one 32 2 2':
+
+      11996.101994 task-clock (msec)         #    3.854 CPUs utilized          
+              1192 context-switches          #    0.099 K/sec                  
+                16 cpu-migrations            #    0.001 K/sec                  
+               579 page-faults               #    0.048 K/sec                  
+       36554477560 cycles                    #    3.047 GHz                     [40.02%]
+       26464260243 stalled-cycles-frontend   #   72.40% frontend cycles idle    [40.02%]
+       23511194715 stalled-cycles-backend    #   64.32% backend  cycles idle    [40.02%]
+       20947182125 instructions              #    0.57  insns per cycle        
+                                             #    1.26  stalled cycles per insn [50.02%]
+        4274517623 branches                  #  356.326 M/sec                   [50.02%]
+          59357183 branch-misses             #    1.39% of all branches         [49.98%]
+        6075432223 L1-dcache-loads           #  506.451 M/sec                   [50.20%]
+          54269623 L1-dcache-load-misses     #    0.89% of all L1-dcache hits   [50.14%]
+          14796651 LLC-loads                 #    1.233 M/sec                   [40.06%]
+           4179055 LLC-load-misses           #   28.24% of all LL-cache hits    [40.00%]
+
+       3.112789806 seconds time elapsed
+

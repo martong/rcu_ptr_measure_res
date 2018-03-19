@@ -1,0 +1,26 @@
+read_one set
+Waited 3000.22 ms
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  locale::facet::_S_create_c_locale name not valid
+../build/release/measurements/measure_rcuptr_jss: Aborted
+
+ Performance counter stats for '../build/release/measurements/measure_rcuptr_jss read_one 1048576 5 1':
+
+      18494.876720 task-clock (msec)         #    5.097 CPUs utilized          
+              1655 context-switches          #    0.089 K/sec                  
+                71 cpu-migrations            #    0.004 K/sec                  
+            209153 page-faults               #    0.011 M/sec                  
+       56718230222 cycles                    #    3.067 GHz                     [39.90%]
+       52069032347 stalled-cycles-frontend   #   91.80% frontend cycles idle    [39.95%]
+       48132151775 stalled-cycles-backend    #   84.86% backend  cycles idle    [40.08%]
+        9099766883 instructions              #    0.16  insns per cycle        
+                                             #    5.72  stalled cycles per insn [50.19%]
+        1376950466 branches                  #   74.450 M/sec                   [50.23%]
+          25303061 branch-misses             #    1.84% of all branches         [50.29%]
+        1835229834 L1-dcache-loads           #   99.229 M/sec                   [50.22%]
+         543829668 L1-dcache-load-misses     #   29.63% of all L1-dcache hits   [50.09%]
+          81178130 LLC-loads                 #    4.389 M/sec                   [40.00%]
+           7826633 LLC-load-misses           #    9.64% of all LL-cache hits    [39.92%]
+
+       3.628660600 seconds time elapsed
+
