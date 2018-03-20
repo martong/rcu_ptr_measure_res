@@ -1,26 +1,33 @@
 read_one set
-Waited 3000.16 ms
-terminate called after throwing an instance of 'std::runtime_error'
-  what():  locale::facet::_S_create_c_locale name not valid
-../build/release/measurements/measure_std_mutex: Aborted
+Waited 3000.14 ms
+reader thread: 865000
+reader thread: 843000
+reader thread: 843000
+reader thread: 847000
+writer thread: 936000
+writer thread: 934000
+reader sum: 3398000
+writer sum: 1870000
+reader av: 849500
+writer av: 935000
 
- Performance counter stats for '../build/release/measurements/measure_std_mutex read_one 1024 4 2':
+ Performance counter stats for '../rcu_ptr/build/release/measurements/measure_std_mutex read_one 1024 4 2':
 
-      10992.963958 task-clock (msec)         #    3.527 CPUs utilized          
-            904374 context-switches          #    0.082 M/sec                  
-               297 cpu-migrations            #    0.027 K/sec                  
-               541 page-faults               #    0.049 K/sec                  
-       28296847240 cycles                    #    2.574 GHz                     [39.52%]
-       19485635332 stalled-cycles-frontend   #   68.86% frontend cycles idle    [39.69%]
-        8024303768 stalled-cycles-backend    #   28.36% backend  cycles idle    [39.89%]
-       17287392835 instructions              #    0.61  insns per cycle        
-                                             #    1.13  stalled cycles per insn [50.20%]
-        4182832889 branches                  #  380.501 M/sec                   [50.71%]
-          33020015 branch-misses             #    0.79% of all branches         [50.49%]
-        3502167319 L1-dcache-loads           #  318.583 M/sec                   [50.40%]
-         218580756 L1-dcache-load-misses     #    6.24% of all L1-dcache hits   [50.40%]
-          76724531 LLC-loads                 #    6.979 M/sec                   [39.69%]
-             63997 LLC-load-misses           #    0.08% of all LL-cache hits    [39.80%]
+      11763.688116 task-clock (msec)         #    3.917 CPUs utilized          
+            817711 context-switches          #    0.070 M/sec                  
+               260 cpu-migrations            #    0.022 K/sec                  
+               472 page-faults               #    0.040 K/sec                  
+       31690159431 cycles                    #    2.694 GHz                     [40.06%]
+       22584015594 stalled-cycles-frontend   #   71.27% frontend cycles idle    [39.99%]
+        8965261838 stalled-cycles-backend    #   28.29% backend  cycles idle    [40.40%]
+       17384299322 instructions              #    0.55  insns per cycle        
+                                             #    1.30  stalled cycles per insn [50.53%]
+        4330834591 branches                  #  368.153 M/sec                   [50.83%]
+          32969434 branch-misses             #    0.76% of all branches         [50.20%]
+        3521770164 L1-dcache-loads           #  299.376 M/sec                   [49.92%]
+         220422149 L1-dcache-load-misses     #    6.26% of all L1-dcache hits   [49.95%]
+          76387677 LLC-loads                 #    6.494 M/sec                   [39.62%]
+             53479 LLC-load-misses           #    0.07% of all LL-cache hits    [39.72%]
 
-       3.116534348 seconds time elapsed
+       3.003276108 seconds time elapsed
 

@@ -1,25 +1,30 @@
-Waited 3000.2 ms
-terminate called after throwing an instance of 'std::runtime_error'
-  what():  locale::facet::_S_create_c_locale name not valid
-../build/release/measurements/measure_tbb_qrw_mutex: Aborted
+Waited 3000.12 ms
+reader thread: 2108000
+reader thread: 2108000
+reader thread: 2108000
+writer thread: 2107000
+reader sum: 6324000
+writer sum: 2107000
+reader av: 2108000
+writer av: 2107000
 
- Performance counter stats for '../build/release/measurements/measure_tbb_qrw_mutex read_all 32 3 1':
+ Performance counter stats for '../rcu_ptr/build/release/measurements/measure_tbb_qrw_mutex read_all 32 3 1':
 
-      11993.403008 task-clock (msec)         #    3.864 CPUs utilized          
-              1021 context-switches          #    0.085 K/sec                  
-                35 cpu-migrations            #    0.003 K/sec                  
-               575 page-faults               #    0.048 K/sec                  
-       36076318294 cycles                    #    3.008 GHz                     [39.95%]
-       16734038851 stalled-cycles-frontend   #   46.39% frontend cycles idle    [39.95%]
-       11721059627 stalled-cycles-backend    #   32.49% backend  cycles idle    [39.97%]
-       39632136290 instructions              #    1.10  insns per cycle        
+      11993.457033 task-clock (msec)         #    3.993 CPUs utilized          
+              1219 context-switches          #    0.102 K/sec                  
+                24 cpu-migrations            #    0.002 K/sec                  
+               516 page-faults               #    0.043 K/sec                  
+       36490098025 cycles                    #    3.043 GHz                     [39.94%]
+       17145432035 stalled-cycles-frontend   #   46.99% frontend cycles idle    [39.95%]
+       12509858120 stalled-cycles-backend    #   34.28% backend  cycles idle    [40.04%]
+       41302488597 instructions              #    1.13  insns per cycle        
                                              #    0.42  stalled cycles per insn [50.07%]
-        8061012704 branches                  #  672.121 M/sec                   [50.15%]
-         181574476 branch-misses             #    2.25% of all branches         [50.26%]
-       11917206971 L1-dcache-loads           #  993.647 M/sec                   [50.22%]
-         105394747 L1-dcache-load-misses     #    0.88% of all L1-dcache hits   [50.16%]
-          44260570 LLC-loads                 #    3.690 M/sec                   [40.05%]
-             19068 LLC-load-misses           #    0.04% of all LL-cache hits    [39.95%]
+        8401042158 branches                  #  700.469 M/sec                   [50.14%]
+          83839395 branch-misses             #    1.00% of all branches         [50.16%]
+       12669467528 L1-dcache-loads           # 1056.365 M/sec                   [50.24%]
+          82381732 L1-dcache-load-misses     #    0.65% of all L1-dcache hits   [50.17%]
+          19912160 LLC-loads                 #    1.660 M/sec                   [40.01%]
+           2926696 LLC-load-misses           #   14.70% of all LL-cache hits    [39.94%]
 
-       3.104258180 seconds time elapsed
+       3.003366036 seconds time elapsed
 
