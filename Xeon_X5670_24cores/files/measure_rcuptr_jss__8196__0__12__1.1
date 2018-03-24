@@ -1,0 +1,39 @@
+Waited 1000.09 ms
+reader thread: 311870
+reader thread: 150999
+reader thread: 133719
+reader thread: 302648
+reader thread: 288347
+reader thread: 311973
+reader thread: 278904
+reader thread: 292724
+reader thread: 290399
+reader thread: 292576
+reader thread: 286032
+reader thread: 281237
+writer thread: 39179
+reader sum: 3221428
+writer sum: 39179
+reader av: 268452
+writer av: 39179
+
+ Performance counter stats for '/home/egbomrt/rcu_ptr/build/release/measurements/measure_rcuptr_jss 8196 0 12 1':
+
+      12874.143043 task-clock (msec)         #   12.833 CPUs utilized          
+              3514 context-switches          #    0.273 K/sec                  
+               129 cpu-migrations            #    0.010 K/sec                  
+               499 page-faults               #    0.039 K/sec                  
+       37379310402 cycles                    #    2.903 GHz                     [39.83%]
+       36445412891 stalled-cycles-frontend   #   97.50% frontend cycles idle    [40.01%]
+       35093325063 stalled-cycles-backend    #   93.88% backend  cycles idle    [40.33%]
+        1388060115 instructions              #    0.04  insns per cycle        
+                                             #   26.26  stalled cycles per insn [50.78%]
+         202888359 branches                  #   15.759 M/sec                   [50.89%]
+          11229876 branch-misses             #    5.54% of all branches         [50.65%]
+         390223222 L1-dcache-loads           #   30.311 M/sec                   [50.42%]
+          89733674 L1-dcache-load-misses     #   23.00% of all L1-dcache hits   [50.18%]
+          10545254 LLC-loads                 #    0.819 M/sec                   [39.71%]
+           1849891 LLC-load-misses           #   17.54% of all LL-cache hits    [39.68%]
+
+       1.003241218 seconds time elapsed
+

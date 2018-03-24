@@ -1,0 +1,35 @@
+Waited 1000.1 ms
+reader thread: 1
+reader thread: 1
+reader thread: 1
+reader thread: 168
+reader thread: 2748
+reader thread: 8
+reader thread: 78
+reader thread: 309
+writer thread: 4021
+reader sum: 3314
+writer sum: 4021
+reader av: 414
+writer av: 4021
+
+ Performance counter stats for '/home/egbomrt/rcu_ptr/build/release/measurements/measure_std_mutex 1048576 0 8 1':
+
+       1047.398979 task-clock (msec)         #    1.042 CPUs utilized          
+              4191 context-switches          #    0.004 M/sec                  
+                47 cpu-migrations            #    0.045 K/sec                  
+               944 page-faults               #    0.901 K/sec                  
+        2861111314 cycles                    #    2.732 GHz                     [41.26%]
+        2057705633 stalled-cycles-frontend   #   71.92% frontend cycles idle    [41.56%]
+        1489082598 stalled-cycles-backend    #   52.05% backend  cycles idle    [43.75%]
+        1793166358 instructions              #    0.63  insns per cycle        
+                                             #    1.15  stalled cycles per insn [53.74%]
+         259786594 branches                  #  248.030 M/sec                   [54.32%]
+            690758 branch-misses             #    0.27% of all branches         [51.87%]
+          16324572 L1-dcache-loads           #   15.586 M/sec                   [50.98%]
+         264102073 L1-dcache-load-misses     #  1617.82% of all L1-dcache hits   [50.28%]
+           1389877 LLC-loads                 #    1.327 M/sec                   [39.25%]
+             26847 LLC-load-misses           #    1.93% of all LL-cache hits    [38.83%]
+
+       1.004783895 seconds time elapsed
+
